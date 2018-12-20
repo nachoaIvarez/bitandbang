@@ -22,7 +22,6 @@ const data = {
   labelTwitter: chalk.white.bold('   Twitter:'),
   labelGitHub: chalk.white.bold('    GitHub:'),
   labelkeybase: chalk.white.bold('   Keybase:'),
-  labelCard: chalk.white.bold('      Card:')
 }
 
 // Actual strings we're going to output
@@ -32,9 +31,8 @@ const working = `${data.labelWork}  ${data.work}`
 const twittering = `${data.labelTwitter}  ${data.twitter}`
 const githubing = `${data.labelGitHub}  ${data.github}`
 const keybaseing = `${data.labelkeybase}  ${data.keybase}`
-const carding = `${data.labelCard}  ${data.npx}`
 
 // Put all our output together into a single variable so we can use boxen effectively
-const output = heading + newline + newline + working + newline + twittering + newline + githubing + newline + keybaseing + newline + newline + carding
+const output = heading + newline + newline + working + newline + twittering + newline + githubing + newline + keybaseing
 
 console.log(chalk.green(boxen(output, options)))
