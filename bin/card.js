@@ -1,13 +1,13 @@
 // Pull in our modules
-const chalk = require('chalk')
-const boxen = require('boxen')
+const chalk = require('chalk');
+const boxen = require('boxen');
 
 // Define options for Boxen
 const options = {
   padding: 1,
   margin: 1,
-  borderStyle: 'round'
-}
+  borderStyle: 'round',
+};
 
 // Text + chalk definitions
 const data = {
@@ -22,17 +22,27 @@ const data = {
   labelTwitter: chalk.white.bold('   Twitter:'),
   labelGitHub: chalk.white.bold('    GitHub:'),
   labelkeybase: chalk.white.bold('   Keybase:'),
-}
+};
 
 // Actual strings we're going to output
-const newline = '\n'
-const heading = `${data.name} ${data.handle}`
-const working = `${data.labelWork}  ${data.work}`
-const twittering = `${data.labelTwitter}  ${data.twitter}`
-const githubing = `${data.labelGitHub}  ${data.github}`
-const keybaseing = `${data.labelkeybase}  ${data.keybase}`
+const newline = '\n';
+const heading = `${data.name} ${data.handle}`;
+const working = `${data.labelWork}  ${data.work}`;
+const twittering = `${data.labelTwitter}  ${data.twitter}`;
+const githubing = `${data.labelGitHub}  ${data.github}`;
+const keybaseing = `${data.labelkeybase}  ${data.keybase}`;
 
 // Put all our output together into a single variable so we can use boxen effectively
-const output = heading + newline + newline + working + newline + twittering + newline + githubing + newline + keybaseing
+const output =
+  heading +
+  newline +
+  newline +
+  working +
+  newline +
+  twittering +
+  newline +
+  githubing +
+  newline +
+  keybaseing;
 
-console.log(chalk.green(boxen(output, options)))
+console.log(chalk.green(boxen(output, options)));
